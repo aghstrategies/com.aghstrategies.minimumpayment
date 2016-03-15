@@ -40,14 +40,9 @@ cj("input,#priceset select,#priceset").each(function () {
     cj(this).bind( 'keyup', function() { 
       if ((totalfee - deliveryfee) < 100)
       cj('#pricevalue').append(' <span style="color:red;">Less than minimum.</span>');
-      if ((totalfee - deliveryfee) > 100)
-      cj('#pricevalue').append(' <span style="color:green;">More than minimum!</span>');        
     }).bind( 'blur' , function() {
       if ((totalfee - deliveryfee) < 100)
       cj('#pricevalue').append(' <span style="color:red;">Less than minimum.</span>');
-      if ((totalfee - deliveryfee) > 100)
-      cj('#pricevalue').append(' <span style="color:green;">More than minimum!</span>');        
-
     });
     // display( totalfee );
 

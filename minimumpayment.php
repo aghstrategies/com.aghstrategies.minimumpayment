@@ -3,27 +3,13 @@
 require_once 'minimumpayment.civix.php';
 
 /**
- * Implementation of hook_civicrm_validateForm
- */
-function minimumpayment_civicrm_validateForm( $formName, &$fields, &$files, &$form, &$errors ) {
-  if ($formName=='CRM_Contribute_Form_Contribution_Main'){
-  //  CRM_Core_Resources::singleton()->addScriptFile('com.aghstrategies.minimumpayment', 'validate.js');
-   // $errors['minium_payment']  = ts('Minimum payment is $100');
-    //print_r($form);
-    //print_r($errors);
-    // return;
-
-  }
-}
-/**
  * Implementation of hook_civicrm_buildForm
  */
 function minimumpayment_civicrm_buildForm( $formName, &$form ) {
   if ($formName=='CRM_Contribute_Form_Contribution_Main'){
-    // if ($form->_id==54){
-    if ($form->_id==3){
+    if ($form->_id==54){
 
-    CRM_Core_Resources::singleton()->addScriptFile('com.aghstrategies.minimumpayment', 'minimum.js');
+      CRM_Core_Resources::singleton()->addScriptFile('com.aghstrategies.minimumpayment', 'minimum.js');
     }
   }
 }
