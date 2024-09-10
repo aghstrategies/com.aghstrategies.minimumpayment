@@ -13,19 +13,11 @@ function minimumpayment_civicrm_buildForm($formName, &$form) {
   }
 }
 
-
 /**
  * Implements hook_civicrm_config().
  */
 function minimumpayment_civicrm_config(&$config) {
   _minimumpayment_civix_civicrm_config($config);
-}
-
-/**
- * Implements hook_civicrm_xmlMenu().
- */
-function minimumpayment_civicrm_xmlMenu(&$files) {
-  _minimumpayment_civix_civicrm_xmlMenu($files);
 }
 
 /**
@@ -36,39 +28,17 @@ function minimumpayment_civicrm_install() {
 }
 
 /**
- * Implements hook_civicrm_uninstall().
- */
-function minimumpayment_civicrm_uninstall() {
-  return _minimumpayment_civix_civicrm_uninstall();
-}
-
-/**
  * Implements hook_civicrm_enable().
  */
 function minimumpayment_civicrm_enable() {
   return _minimumpayment_civix_civicrm_enable();
 }
 
-/**
- * Implements hook_civicrm_disable().
- */
-function minimumpayment_civicrm_disable() {
-  return _minimumpayment_civix_civicrm_disable();
-}
-
-/**
- * Implements hook_civicrm_upgrade().
- */
-function minimumpayment_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
-  return _minimumpayment_civix_civicrm_upgrade($op, $queue);
-}
-
-/**
- * Implements hook_civicrm_managed().
- *
- * Generate a list of entities to create/deactivate/delete when this module
- * is installed, disabled, uninstalled.
- */
-function minimumpayment_civicrm_managed(&$entities) {
-  return _minimumpayment_civix_civicrm_managed($entities);
-}
+// /**
+//  * Implements hook_civicrm_postInstall().
+//  *
+//  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_postInstall
+//  */
+// function minimumpayment_civicrm_postInstall() {
+//   _minimumpayment_civix_civicrm_postInstall();
+// }
